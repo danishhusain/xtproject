@@ -28,7 +28,7 @@ const HomeScreen = () => {
     },
     onSuccess: resp => {
       if (resp?.length === 0) {
-        showToast('No more data');
+        showToast('No more images');
       }
       setState(prev => {
         const newUniqueImages = resp?.filter(

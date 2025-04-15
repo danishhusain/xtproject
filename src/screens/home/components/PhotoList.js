@@ -51,7 +51,7 @@ const PhotoList = ({item, navigation}) => {
           onError={() => setHasError(true)}
         />
       ) : (
-        <Text style={styles.errorText}>Image not available</Text>
+        <Text style={styles.errorText}>Image Loading...</Text>
       )}
     </Pressable>
   );

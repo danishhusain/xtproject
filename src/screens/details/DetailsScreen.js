@@ -90,7 +90,7 @@ const DetailsScreen = ({route}) => {
       return await DetailsScreenHelper.saveUserData(formDataToSend);
     },
     onSuccess: resp => {
-      showToast(resp?.message);
+      showToast(`${resp.message}`);
       resetForm();
     },
     onError: error => {
@@ -125,7 +125,7 @@ const DetailsScreen = ({route}) => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardContainer}
         keyboardVerticalOffset={
-          Platform.OS === 'ios' ? Responsive.height(90) : Responsive.height(50)
+          Platform.OS === 'ios' ? Responsive.height(60) : Responsive.height(50)
         }>
         <ScrollView
           contentContainerStyle={styles.scrollContent}
