@@ -64,6 +64,7 @@ const HomeScreen = () => {
         data={state.images}
         keyExtractor={item => item.id.toString()}
         renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
         ListFooterComponent={
           mutation.isPending ? (
             <ActivityIndicator size="large" style={styles.loder} />

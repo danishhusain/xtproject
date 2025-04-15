@@ -1,9 +1,8 @@
 import React from 'react';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {RootSiblingParent} from 'react-native-root-siblings';
 import Routes from './src/navigation/Routes';
-import {StatusBar, StyleSheet} from 'react-native';
-import {colors} from './src/constants/colors';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 const queryClient = new QueryClient();
 
@@ -11,8 +10,10 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="dark-content" />
-        <Routes />
+        <RootSiblingParent>
+          <StatusBar barStyle="dark-content" />
+          <Routes />
+        </RootSiblingParent>
       </SafeAreaView>
     </QueryClientProvider>
   );

@@ -21,7 +21,7 @@ import {useMutation} from '@tanstack/react-query';
 import {getUpdatedImageUrl} from '../../constants/commonLogic';
 import applicationProperties from '../../factories/application.properties';
 
-const DetailsScreen = ({route, navigation}) => {
+const DetailsScreen = ({route}) => {
   const {item, imageDimensions} = route.params || {};
   const imageUrl = item?.xt_image || applicationProperties.noImageUrl;
   const updatedImageUrl = getUpdatedImageUrl(imageUrl);

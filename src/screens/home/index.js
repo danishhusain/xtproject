@@ -1,4 +1,5 @@
 import {ApiMethods} from '../../constants/apiMethods';
+import {showToast} from '../../constants/toast';
 import apiFactory from '../../factories/apiFactory';
 
 export const HomeScreenHelper = {
@@ -16,7 +17,7 @@ export const HomeScreenHelper = {
       });
       return resp.response.images;
     } catch (error) {
-      console.warn(error);
+      showToast(error);
     }
   },
 };

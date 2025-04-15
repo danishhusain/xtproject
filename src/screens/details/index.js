@@ -1,4 +1,5 @@
 import {ApiMethods} from '../../constants/apiMethods';
+import {showToast} from '../../constants/toast';
 import apiFactory from '../../factories/apiFactory';
 
 export const DetailsScreenHelper = {
@@ -12,7 +13,7 @@ export const DetailsScreenHelper = {
 
       return resp.response;
     } catch (error) {
-      console.warn(error);
+      showToast(error);
     }
   },
   extractImageInfo: item => {
