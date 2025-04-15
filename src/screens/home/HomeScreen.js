@@ -31,7 +31,7 @@ const HomeScreen = () => {
         showToast('No more data');
       }
       setState(prev => {
-        const newUniqueImages = resp.filter(
+        const newUniqueImages = resp?.filter(
           item => !prev.images.some(existing => existing.id === item.id),
         );
 
