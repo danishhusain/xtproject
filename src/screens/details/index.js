@@ -13,7 +13,7 @@ export const DetailsScreenHelper = {
 
       return resp.response;
     } catch (error) {
-      showToast(error);
+      showToast(`${error}`);
     }
   },
   extractImageInfo: item => {

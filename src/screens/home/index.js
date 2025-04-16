@@ -17,7 +17,7 @@ export const HomeScreenHelper = {
       });
       return resp.response.images;
     } catch (error) {
-      showToast(error);
+      showToast(`${error}`);
     }
   },
 };
